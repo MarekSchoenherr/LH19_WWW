@@ -96,9 +96,9 @@ states.
     \hline
     13\,TeV \vP
     & LO [fb] & NLO [fb] 
-    & $\Delta_{q\bar{q}}^\text{EW}$ [\%]
-    & $\Delta_{q\gamma}^\text{EW}$ [\%]
-    & $\Delta^\text{QCD} [\%]$\\\hline
+    & $\delta_{q\bar{q}}^\text{EW}$ [\%]
+    & $\delta_{q\gamma}^\text{EW}$ [\%]
+    & $\delta^\text{QCD} [\%]$\\\hline
     \hfill DKS \vp
     & 0.194990(19) & 0.2626(10) & -7.70(40) & 7.220(5) & 38.02(04) \\
     \hfill\Sherpa{}+\Recola \vp
@@ -109,9 +109,9 @@ states.
     \hline
     13\,TeV \vP
     & LO [fb] & NLO [fb] 
-    & $\Delta_{q\bar{q}}^\text{EW}$ [\%]
-    & $\Delta_{q\gamma}^\text{EW}$ [\%]
-    & $\Delta^\text{QCD} [\%]$\\\hline
+    & $\delta_{q\bar{q}}^\text{EW}$ [\%]
+    & $\delta_{q\gamma}^\text{EW}$ [\%]
+    & $\delta^\text{QCD} [\%]$\\\hline
     \hfill DKS \vp
     & 0.118411(12) & 0.1597(06) & -7.00(30) & 7.260(5) & 37.17(4) \\
     \hfill\Sherpa{}+\Recola \vp
@@ -130,9 +130,9 @@ states.
     \hline
     14\,TeV \vP
     & LO [fb] & NLO [fb] 
-    & $\Delta_{q\bar{q}}^\text{EW}$ [\%]
-    & $\Delta_{q\gamma}^\text{EW}$ [\%]
-    & $\Delta^\text{QCD} [\%]$\\\hline
+    & $\delta_{q\bar{q}}^\text{EW}$ [\%]
+    & $\delta_{q\gamma}^\text{EW}$ [\%]
+    & $\delta^\text{QCD} [\%]$\\\hline
     \hfill DKS \vp
     & 0.209820(20) & 0.2872(12) & -7.80(40) & 7.780(5) & 40.04(04) \\
     \hfill\Sherpa{}+\Recola \vp
@@ -143,9 +143,9 @@ states.
     \hline
     14\,TeV \vP
     & LO [fb] & NLO [fb] 
-    & $\Delta_{q\bar{q}}^\text{EW}$ [\%]
-    & $\Delta_{q\gamma}^\text{EW}$ [\%]
-    & $\Delta^\text{QCD} [\%]$\\\hline
+    & $\delta_{q\bar{q}}^\text{EW}$ [\%]
+    & $\delta_{q\gamma}^\text{EW}$ [\%]
+    & $\delta^\text{QCD} [\%]$\\\hline
     \hfill DKS \vp
     & 0.129986(13) & 0.1779(07) & -7.20(40) & 7.730(5) & 39.15(04) \\
     \hfill\Sherpa{}+\Recola \vp
@@ -153,7 +153,7 @@ states.
   \end{tabular}
   \caption{
     Comparison of cross sections at 14\,TeV.
-    \label{tab:WWW:xsecs13}
+    \label{tab:WWW:xsecs14}
   }
 \end{table}
 
@@ -181,7 +181,7 @@ They are then converted to pole masses using
   \qquad
   \Gamma_V=\frac{\Gamma_V^\text{OS}}{\sqrt{1+\left(\frac{\Gamma_V^\text{OS}}{M_V^\text{OS}}\right)^2}}
 \end{equation}
-In addtion, we set the Higgs boson mass and top-quark masses 
+In addtion, we set the Higgs boson and top-quark masses 
 and widths to 
 \begin{center}
   \begin{tabular}{ll}
@@ -213,6 +213,54 @@ real parts of the complex masses, i.e.\
   \alpha=\frac{\sqrt{2}}{\pi}\,G_\mu\,M_W\left(1-\frac{M_W^2}{M_Z^2}\right);.
 \end{equation}
 The electroweak parameters are renormalised in the same scheme.
+
+\textit{MS: add LO PDF.}
+The parton densities of the proton are parametrised using the 
+NNPDF 3.1 QCD+QED NLO PDF set \cite{} with 
+\begin{equation}
+  \alpha_s(M_Z)=0.118\nonumber\,,
+\end{equation}
+interfaced through \textsc{LHAPDF}\footnote{
+  In particular, we use \textsc{LHAPDF} 6.2.1 with PDF set 
+  \texttt{NNPDF31\_nlo\_as\_0118\_luxqed}.
+}. 
+We set the renormalisation and factorisation scale to 
+\begin{equation}
+  \mu_\text{R/F}^2=\left(\vp3\,M_W\right)^2+\left(\sum\limits_{i\in S}\vec{p}_{\mathrm{T},i}\right)^2
+\end{equation}
+where $S$ denotes all colour-neutral final states.
+
+We now define the relative NLO corrections 
+\begin{equation}
+  \delta_{q\bar{q}}^\text{EW}
+  =\frac{\Delta\sigma_{q\bar{q}}^\text{NLO EW}}{\sigma_1^\text{LO}}
+  \;,\qquad
+  \delta_{q\gamma}^\text{EW}
+  =\frac{\Delta\sigma_{q\gamma}^\text{NLO EW}}{\sigma^\text{LO}}
+  \;,\qquad
+  \delta^\text{QCD}
+  =\frac{\sigma_1^\text{LO}-\sigma^\text{LO}+\Delta\sigma^\text{NLO QCD}}{\sigma^\text{LO}}\,,
+\end{equation}
+where the subscripts define the class of parton luminosities 
+that contribute.
+\textit{MS: add description of when LO PDF is used and why.}
+
+The results obtained with both calculations for this setup 
+for both channels, $W^+W^+W^-$ and $W^+W^-W^-$, for the LHC 
+at both 13 and 14\,TeV centre-of-mass energy are detailed 
+in Tabs.\ \ref{tab:WWW:xsecs13} and \ref{tab:WWW:xsecs14}. 
+We generally find good agreement, cf.\ Fig.\ \ref{fig:WWW:xscomp},
+despite the process' poor convergence owing to the presence 
+of multiple narrow resonances.
+
+\begin{figure}[t!]
+  \centering
+%   \includegraphics[width=0.5\textwidth]{comp-dist}
+  \caption{
+    Distribution of differences $\sigma=\frac{x_\text{DKS}-x_\text{\Sherpa}}{\sqrt{\sigma_\text{DKS}^2+\sigma_\text{\Sherpa}^2}}$.
+    \label{fig:WWW:xscomp}
+  }
+\end{figure}
 
 
 
