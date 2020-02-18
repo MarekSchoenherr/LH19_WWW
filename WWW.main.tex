@@ -6,6 +6,9 @@
 \newcommand{\Recola}{R\protect\scalebox{0.8}{ECOLA}\xspace}
 \newcommand{\Amegic}{A\protect\scalebox{0.8}{MEGIC}\xspace}
 \newcommand{\Professor}{P\protect\scalebox{0.8}{ROFESSOR}\xspace}
+\newcommand{\OpenLoops}{O\protect\scalebox{0.8}{PENLOOPS 2}\xspace}
+\newcommand{\Collier}{C\protect\scalebox{0.8}{OLLIER}\xspace}
+\newcommand{\Madgraph}{M\protect\scalebox{0.8}{G5\_aMC@NLO}\xspace}
 \newcommand{\eps}{\varepsilon}
 \newcommand{\mc}[1]{\mathcal{#1}}
 \newcommand{\mr}[1]{\mathrm{#1}}
@@ -44,7 +47,7 @@ In this contribution, we are comparing the numerical results
 obtained by two different and independent calculations for 
 off-shell $WWW$ production.
 On the one hand side, we use a combination of \Sherpa \cite{} 
-and \Recola \cite{}, as presented in \cite{}. 
+and \Recola \cite{Actis:2012qn,Actis:2016mpe}, as presented in \cite{}.
 Therein, \Sherpa provides the tree-level matrix elements, 
 infrared substraction, process management and phase-space 
 integration through its matrix element generator \Amegic 
@@ -52,9 +55,13 @@ integration through its matrix element generator \Amegic
 \Recola is interfaced \cite{} to provide all renormalised 
 virtual corrections.
 
-On the other hand ...
-
-
+On the other hand, the results denoted as DKS are the ones presented in Ref.~\cite{Dittmaier:2019twg}.
+These numbers were calculated and double-checked using two private codes; the first one was developed specifically for this process, and the second one is a generic code that was already used to calculate other EW processes~\cite{Ballestrero:2018anz,Denner:2019tmn,Denner:2019zfp}.
+The first code uses dipole subtraction as presented in Ref.~\cite{Catani:1996vz} for QCD corrections and Refs.~\cite{Dittmaier:1999mb,Dittmaier:2008md} for EW corrections.
+Matrix elements were generated using \Madgraph \cite{Alwall:2014hca} and \Recola.
+The second code is able to use either dipole subtraction as presented in Ref.~\cite{Catani:1996vz} for both QCD and EW corrections, the latter using the trivial substitutions for the Casimir operator presented e.g.\ in section 3.2 of Ref.~\cite{Kallweit:2014xda}, or, alternatively, the dipole subtraction methods used in the first code.
+The matrix elements are provided by \OpenLoops \cite{Cascioli:2011va,Kallweit:2014xda,Buccioni:2019sur}, which uses \Collier \cite{Denner:2016kdg,Denner:2002ii,Denner:2005nn,Denner:2010tr} for the evaluation of rank 0 and 1 tensor one-loop integrals.
+Both codes use multi-channel Monte Carlo techniques \cite{Hilgart:1992xu,Kleiss:1994qy} for the phase-space integration with phase-space maps similar to the ones presented in Ref.~\cite{Dittmaier:2002ap}.
 
 %= comparison ===== =====================================
 \subsection{Comparison and results}
@@ -144,6 +151,8 @@ On the other hand ...
 \let\Recola\undefined
 \let\Professor\undefined
 \let\Amegic\undefined
+\let\OpenLoops\undefined
+\let\Collier\undefined
 \let\eps\undefined
 \let\mc\undefined
 \let\mr\undefined
