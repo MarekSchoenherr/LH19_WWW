@@ -4,6 +4,7 @@
 \newcommand{\Sherpa}{S\protect\scalebox{0.8}{HERPA}\xspace}
 \newcommand{\Rivet}{R\protect\scalebox{0.8}{IVET}\xspace}
 \newcommand{\Recola}{R\protect\scalebox{0.8}{ECOLA}\xspace}
+\newcommand{\Amegic}{A\protect\scalebox{0.8}{MEGIC}\xspace}
 \newcommand{\Professor}{P\protect\scalebox{0.8}{ROFESSOR}\xspace}
 \newcommand{\eps}{\varepsilon}
 \newcommand{\mc}[1]{\mathcal{#1}}
@@ -25,7 +26,7 @@
 
 %= (optional) preamble ================================== 
 
-%= intro ===== ========================================
+%= intro ===== ==========================================
 \subsection{Introduction}
 \label{sec:WWW:intro}
 
@@ -39,7 +40,23 @@ paper~\cite{Aaboud:2016ffv}, tHV~\cite{'tHooft:1972fi}, and again~\cite{'tHooft:
 \subsection{Methods}
 \label{sec:WWW:methods}
 
-%= methods ===== ========================================
+In this contribution, we are comparing the numerical results 
+obtained by two different and independent calculations for 
+off-shell $WWW$ production.
+On the one hand side, we use a combination of \Sherpa \cite{} 
+and \Recola \cite{}, as presented in \cite{}. 
+Therein, \Sherpa provides the tree-level matrix elements, 
+infrared substraction, process management and phase-space 
+integration through its matrix element generator \Amegic 
+\cite{}. 
+\Recola is interfaced \cite{} to provide all renormalised 
+virtual corrections.
+
+On the other hand ...
+
+
+
+%= comparison ===== =====================================
 \subsection{Comparison and results}
 \label{sec:WWW:comparison}
 
@@ -126,6 +143,7 @@ paper~\cite{Aaboud:2016ffv}, tHV~\cite{'tHooft:1972fi}, and again~\cite{'tHooft:
 \let\Rivet\undefined
 \let\Recola\undefined
 \let\Professor\undefined
+\let\Amegic\undefined
 \let\eps\undefined
 \let\mc\undefined
 \let\mr\undefined
