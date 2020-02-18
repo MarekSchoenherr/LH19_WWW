@@ -15,7 +15,7 @@
 \newcommand{\vP}{\ensuremath{\vphantom{\int\limits_a^b}}}
 
 %= title + authors =====================================
-\section{NLO corrections to off-shell $WWW$ production\protect\footnote{
+\section{NLO corrections to off-shell \texorpdfstring{$WWW$}{WWW} production\protect\footnote{
   S.~Dittmaier,
   G.~Knippen,
   M.~Sch{\"o}nherr,
@@ -30,10 +30,7 @@
 \subsection{Introduction}
 \label{sec:WWW:intro}
 
-To cite a paper, use bibtex:
-
-Examples: Les Houches 2015 report~\cite{Badger:2016bpw},
-paper~\cite{Aaboud:2016ffv}, tHV~\cite{'tHooft:1972fi}, and again~\cite{'tHooft:1972fi}
+ATLAS 8\,TeV analysis \cite{Aaboud:2016ftt}.
 
 
 %= methods ===== ========================================
@@ -43,22 +40,44 @@ paper~\cite{Aaboud:2016ffv}, tHV~\cite{'tHooft:1972fi}, and again~\cite{'tHooft:
 In this contribution, we are comparing the numerical results 
 obtained by two different and independent calculations for 
 off-shell $WWW$ production.
-On the one hand side, we use a combination of \Sherpa \cite{} 
-and \Recola \cite{}, as presented in \cite{}. 
+On the one hand side, we use a combination of \Sherpa 
+\cite{Bothmann:2019yzt,Gleisberg:2008ta,Bothmann:2016nao,Hoeche:2014rya} 
+and \Recola \cite{Actis:2012qn,Actis:2016mpe}, as presented 
+in \cite{Schonherr:2018jva}. 
 Therein, \Sherpa provides the tree-level matrix elements, 
 infrared substraction, process management and phase-space 
 integration through its matrix element generator \Amegic 
-\cite{}. 
-\Recola is interfaced \cite{} to provide all renormalised 
-virtual corrections.
+\cite{Krauss:2001iv,Gleisberg:2007md,Schonherr:2017qcj}. 
+\Recola is interfaced \cite{Biedermann:2017yoi} to provide 
+all renormalised virtual corrections.
 
 On the other hand ...
 
-
+All processes are calculated including all triple, double, 
+single and non-resonant topologies, as well as all interferences 
+between channels with different vector and Higgs boson intermediate
+states.
 
 %= comparison ===== =====================================
 \subsection{Comparison and results}
 \label{sec:WWW:comparison}
+
+\begin{table}[t!]
+  \centering
+  \begin{tabular}{c|c}
+    Cut & Value \\\hline
+    $p_\mathrm{T}(\ell)$ & $[20,\infty]\,\text{GeV}$ \\
+    $\eta(\ell)$ & $[-2.5,2.5]$ \\
+    $p_\mathrm{T}(\ell_1)$ & $[27,\infty]\,\text{GeV}$ \\
+    $\Delta R(\ell_i,\ell_j)$ & $[0.1,\infty]$
+  \end{tabular}
+  \caption{
+    Definition of the fiducial region. Lepton requirements relate 
+    to dressed leptons using a Cone algorithm with $\Delta R_\text{dress}=0.1$.
+    \label{tab:WWW:cuts}
+  }
+\end{table}
+
 
 \begin{table}[t!]
   \centering
@@ -127,6 +146,65 @@ On the other hand ...
     \label{tab:WWW:xsecs13}
   }
 \end{table}
+
+In order to compare the calculations of the independent 
+calculations laid out in the previous section we 
+choose the following setup.
+We compute the production cross sections for the production of 
+final states with (at least) one electron, one muon and one 
+$\tau$-lepton with the corresponding three neutrinos at the 
+LHC 13 and 14\,TeV at leading and next-to-leading order 
+in both the QCD and electroweak coupling of the Standard Model
+in the phase space detailed in 
+Tab.\ \ref{tab:WWW:cuts}. 
+The gauge boson masses and widths are defined by their on-shell 
+value provided by the Particle Data Group \cite{}, 
+\begin{center}
+  \begin{tabular}{ll}
+    $M_W^\text{OS}=80.379\,\text{GeV}$\qquad & $\Gamma_W^\text{OS}=2.085\,\text{GeV}$ \\
+    $M_Z^\text{OS}=91.1876\,\text{GeV}$\qquad & $\Gamma_Z^\text{OS}=2.4952\,\text{GeV}$.
+  \end{tabular}
+\end{center}
+They are then converted to pole masses using 
+\begin{equation}
+  M_V=\frac{M_V^\text{OS}}{\sqrt{1+\left(\frac{\Gamma_V^\text{OS}}{M_V^\text{OS}}\right)^2}}\;,
+  \qquad
+  \Gamma_V=\frac{\Gamma_V^\text{OS}}{\sqrt{1+\left(\frac{\Gamma_V^\text{OS}}{M_V^\text{OS}}\right)^2}}
+\end{equation}
+In addtion, we set the Higgs boson mass and top-quark masses 
+and widths to 
+\begin{center}
+  \begin{tabular}{ll}
+    $M_h=125\,\text{GeV}$ & $\Gamma_h=0.004088\,\text{GeV}$ \\
+    $M_t=173\,\text{GeV}$ & $\Gamma_t=0$\;. \\
+  \end{tabular}
+\end{center}
+The bottom and all other quarks and leptons (including the $\tau$) 
+are considered massless.
+We perform our calculation in the complex mass scheme 
+\cite{Denner:2005fg,Denner:2014zga},
+defining
+\begin{equation}
+  \mu_V^2=M_V^2-iM_V\Gamma_V\;.
+\end{equation}
+The CKM matrix is parametrised using the Cabibbo angle 
+\begin{equation}
+  \theta_\text{C}=0.22731\;,\nonumber
+\end{equation}
+neglecting mixing with the third generation. 
+All parameters of the electroweak part of the Standard Model 
+are fixed using the $G_\mu$-scheme \cite{} with
+\begin{equation}
+  G_\mu=1.1663787\cdot 10^{-5}\,\text{GeV}^{-2}\;.\nonumber
+\end{equation}
+We then define the electromagnetic coupling through the 
+real parts of the complex masses, i.e.\
+\begin{equation}
+  \alpha=\frac{\sqrt{2}}{\pi}\,G_\mu\,M_W\left(1-\frac{M_W^2}{M_Z^2}\right);.
+\end{equation}
+The electroweak parameters are renormalised in the same scheme.
+
+
 
 
 
