@@ -48,7 +48,7 @@ On the one hand side, we use a combination of \Sherpa
 and \Recola \cite{Actis:2012qn,Actis:2016mpe}, as presented 
 in \cite{Schonherr:2018jva}. 
 Therein, \Sherpa provides the tree-level matrix elements, 
-infrared substraction, process management and phase-space 
+infrared subtraction, process management and phase-space
 integration through its matrix element generator \Amegic 
 \cite{Krauss:2001iv,Gleisberg:2007md,Schonherr:2017qcj}. 
 \Recola is interfaced \cite{Biedermann:2017yoi} to provide 
@@ -157,16 +157,16 @@ states.
   }
 \end{table}
 
-In order to compare the calculations of the independent 
+To compare the independent
 calculations laid out in the previous section we 
 choose the following setup.
-We compute the production cross sections for the production of 
-final states with (at least) one electron, one muon and one 
-$\tau$-lepton with the corresponding three neutrinos at the 
-LHC 13 and 14\,TeV at leading and next-to-leading order 
+We compute the cross sections for the production of
+final states with (at least) one electron, one muon, and one
+$\tau$-lepton with the corresponding three neutrinos for the
+LHC at 13 and 14\,TeV at leading and next-to-leading order
 in both the QCD and electroweak coupling of the Standard Model
 in the phase space detailed in 
-Tab.\ \ref{tab:WWW:cuts}. 
+Tab.~\ref{tab:WWW:cuts}.
 The gauge boson masses and widths are defined by their on-shell 
 value provided by the Particle Data Group \cite{Tanabashi:2018oca}, 
 \begin{center}
@@ -179,9 +179,9 @@ They are then converted to pole masses using
 \begin{equation}
   M_V=\frac{M_V^\text{OS}}{\sqrt{1+\left(\frac{\Gamma_V^\text{OS}}{M_V^\text{OS}}\right)^2}}\;,
   \qquad
-  \Gamma_V=\frac{\Gamma_V^\text{OS}}{\sqrt{1+\left(\frac{\Gamma_V^\text{OS}}{M_V^\text{OS}}\right)^2}}
+  \Gamma_V=\frac{\Gamma_V^\text{OS}}{\sqrt{1+\left(\frac{\Gamma_V^\text{OS}}{M_V^\text{OS}}\right)^2}}.
 \end{equation}
-In addtion, we set the Higgs boson and top-quark masses 
+In addition, we set the Higgs boson and top-quark masses
 and widths to 
 \begin{center}
   \begin{tabular}{ll}
@@ -189,13 +189,13 @@ and widths to
     $M_t=173\,\text{GeV}$ & $\Gamma_t=0$\;. \\
   \end{tabular}
 \end{center}
-The bottom and all other quarks and leptons (including the $\tau$) 
+All remaining quarks and leptons, in particular the bottom quark and the $\tau$-lepton,
 are considered massless.
 We perform our calculation in the complex mass scheme 
 \cite{Denner:2005fg,Denner:2014zga},
 defining
 \begin{equation}
-  \mu_V^2=M_V^2-iM_V\Gamma_V\;.
+  \mu_V^2=M_V^2-\mathrm{i}M_V\Gamma_V\;.
 \end{equation}
 The CKM matrix is parametrised using the Cabibbo angle 
 \begin{equation}
@@ -203,14 +203,14 @@ The CKM matrix is parametrised using the Cabibbo angle
 \end{equation}
 neglecting mixing with the third generation. 
 All parameters of the electroweak part of the Standard Model 
-are fixed using the $G_\mu$-scheme \cite{} with
+are fixed using the $G_\mu$-scheme \cite{Dittmaier:2001ay} with
 \begin{equation}
   G_\mu=1.1663787\cdot 10^{-5}\,\text{GeV}^{-2}\;.\nonumber
 \end{equation}
 We then define the electromagnetic coupling through the 
 real parts of the complex masses, i.e.\
 \begin{equation}
-  \alpha=\frac{\sqrt{2}}{\pi}\,G_\mu\,M_W\left(1-\frac{M_W^2}{M_Z^2}\right);.
+  \alpha=\frac{\sqrt{2}}{\pi}\,G_\mu\,M_W\left(1-\frac{M_W^2}{M_Z^2}\right)\;.
 \end{equation}
 The electroweak parameters are renormalised in the same scheme.
 
@@ -220,15 +220,15 @@ section, $\sigma^\text{LO}$, NNPDF 3.1 QCD+QED NLO PDF set
 \cite{Bertone:2017bme} for the Born contribution to the 
 NLO calculation, $\sigma_1^\text{LO}$, and all genuine NLO 
 corrections. 
-Both PDF sets set
+We choose the PDF sets with the strong coupling set to
 \begin{equation}
   \alpha_s(M_Z)=0.118\nonumber
 \end{equation}
-and are interfaced through \textsc{LHAPDF}\footnote{
+and \textsc{LHAPDF}\footnote{
   In particular, we use \textsc{LHAPDF} 6.2.1 with PDF sets 
   \texttt{NNPDF31\_lo\_as\_0118} and 
   \texttt{NNPDF31\_nlo\_as\_0118\_luxqed}.
-}. 
+} to evaluate them.
 We set the renormalisation and factorisation scale to 
 \begin{equation}
   \mu_\text{R/F}^2=\left(\vp3\,M_W\right)^2+\left(\sum\limits_{i\in S}\vec{p}_{\mathrm{T},i}\right)^2
@@ -246,11 +246,16 @@ We now define the relative NLO corrections
   \delta^\text{QCD}
   =\frac{\sigma_1^\text{LO}-\sigma^\text{LO}+\Delta\sigma^\text{NLO QCD}}{\sigma^\text{LO}}\,,
 \end{equation}
-where the subscripts define the class of parton luminosities 
+where the subscripts of the corrections $\Delta \sigma^\text{NLO}$
+define the class of parton luminosities
 that contribute.
-With this definition, both the QCD correction and the photon 
-induced EW correction are defined wrt. pure LO calculation 
-while $\delta_{q\bar{q}}^\text{EW}$ renders this part almost 
+Furthermore, $\sigma^\text{LO}$ denotes the LO integrated cross
+section evaluated with LO PDFs, whereas $\sigma_1^\text{LO}$ denotes
+the LO integrated cross section evaluated with NLO PDFs (as part of
+the NLO prediction).
+With these definitions, both the QCD correction and the photon
+induced EW correction are defined w.r.t.\ the pure LO calculation,
+while $\delta_{q\bar{q}}^\text{EW}$ is almost
 entirely insensitive to the actual PDF chosen, and thus 
 universal.
 
@@ -259,8 +264,8 @@ The results obtained with both calculations for this setup
 for both channels, $W^+W^+W^-$ and $W^+W^-W^-$, for the LHC 
 at both 13 and 14\,TeV centre-of-mass energy are detailed 
 in Tabs.\ \ref{tab:WWW:xsecs13} and \ref{tab:WWW:xsecs14}. 
-We generally find good agreement, cf.\ Fig.\ \ref{fig:WWW:xscomp},
-despite the process' poor convergence owing to the presence 
+We generally find good agreement, see Fig.~\ref{fig:WWW:xscomp},
+despite the process's poor convergence owing to the presence
 of multiple narrow resonances.
 
 \begin{figure}[t!]
