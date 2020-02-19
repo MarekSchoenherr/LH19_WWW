@@ -1,0 +1,59 @@
+# BEGIN PLOT
+#Rebin=2
+DrawOnly=abssigma
+XTwosidedTicks=1
+YTwosidedTicks=1
+XLabel=$\displaystyle \frac{\left|\sigma_\text{DKS}-\sigma_\text{\textsc{Sherpa}}\right|}{\sqrt{(\Delta\sigma_\text{DKS})^2+(\Delta\sigma_\text{\textsc{Sherpa}})^2}}$
+YLabel=$N$
+LogX=0
+LogY=0
+XMin=0
+XMax=3.
+YMin=0
+YMax=10
+YMajorTickMarks=2
+XLabelSep=7
+BottomMargin=2
+DrawSpecialFirst=1
+PlotSize=10,5
+# END PLOT
+
+# BEGIN HISTOGRAM sigma
+Title=DKS-\textsc{Sherpa}
+LineStyle=solid
+LineColor=blue
+-3.5	-3.0	0
+-3.0	-2.5	0
+-2.5	-2.0	1
+-2.0	-1.5	2
+-1.5	-1.0	3
+-1.0	-0.5	4
+-0.5	0.0	6
+0.0	0.5	0
+0.5	1.0	3
+1.0	1.5	1
+1.5	2.0	0
+2.0	2.5	0
+2.5	3.0	0
+3.0	3.5	0
+# END HISTOGRAM
+
+# BEGIN HISTOGRAM abssigma
+Title=DKS-\textsc{Sherpa}
+LineStyle=solid
+LineColor=blue
+0.0	0.5	6
+0.5	1.0	7
+1.0	1.5	4
+1.5	2.0	2
+2.0	2.5	1
+2.5	3.0	0
+3.0	3.5	0
+# END HISTOGRAM
+
+# BEGIN FUNCTION gauss
+LineColor=black
+Code=
+return 20./sqrt(2*3.1415)*exp(-(x*x)/2)
+# END FUNCTION
+

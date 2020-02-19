@@ -214,14 +214,19 @@ real parts of the complex masses, i.e.\
 \end{equation}
 The electroweak parameters are renormalised in the same scheme.
 
-\textit{MS: add LO PDF.}
 The parton densities of the proton are parametrised using the 
-NNPDF 3.1 QCD+QED NLO PDF set \cite{} with 
+NNPDF 3.1 QCD LO PDF set \cite{Ball:2017nwa} for the LO cross 
+section, $\sigma^\text{LO}$, NNPDF 3.1 QCD+QED NLO PDF set 
+\cite{Bertone:2017bme} for the Born contribution to the 
+NLO calculation, $\sigma_1^\text{LO}$, and all genuine NLO 
+corrections. 
+Both PDF sets set
 \begin{equation}
-  \alpha_s(M_Z)=0.118\nonumber\,,
+  \alpha_s(M_Z)=0.118\nonumber
 \end{equation}
-interfaced through \textsc{LHAPDF}\footnote{
-  In particular, we use \textsc{LHAPDF} 6.2.1 with PDF set 
+and are interfaced through \textsc{LHAPDF}\footnote{
+  In particular, we use \textsc{LHAPDF} 6.2.1 with PDF sets 
+  \texttt{NNPDF31\_lo\_as\_0118} and 
   \texttt{NNPDF31\_nlo\_as\_0118\_luxqed}.
 }. 
 We set the renormalisation and factorisation scale to 
@@ -243,7 +248,12 @@ We now define the relative NLO corrections
 \end{equation}
 where the subscripts define the class of parton luminosities 
 that contribute.
-\textit{MS: add description of when LO PDF is used and why.}
+With this definition, both the QCD correction and the photon 
+induced EW correction are defined wrt. pure LO calculation 
+while $\delta_{q\bar{q}}^\text{EW}$ renders this part almost 
+entirely insensitive to the actual PDF chosen, and thus 
+universal.
+
 
 The results obtained with both calculations for this setup 
 for both channels, $W^+W^+W^-$ and $W^+W^-W^-$, for the LHC 
@@ -255,9 +265,12 @@ of multiple narrow resonances.
 
 \begin{figure}[t!]
   \centering
-%   \includegraphics[width=0.5\textwidth]{comp-dist}
+  \includegraphics[width=0.5\textwidth]{comp-dist}
   \caption{
-    Distribution of differences $\sigma=\frac{x_\text{DKS}-x_\text{\Sherpa}}{\sqrt{\sigma_\text{DKS}^2+\sigma_\text{\Sherpa}^2}}$.
+    Comparison of computed cross sections and relative 
+    corrections of DKS and \Sherpa{}+\Recola. 
+    For reference the black line 
+    shows a properly normalised normal distribution.
     \label{fig:WWW:xscomp}
   }
 \end{figure}
