@@ -42,9 +42,9 @@ this means that the LHC can observe the phenomenologically highly
 interesting processes of EW vector-boson scattering (VBS) and
 of triple EW vector-boson production (TVP) for the first time.
 The analysis of those process classes is particularly interesting
-because of their direct sensitivity to quartic gauge self-interations
+because of their direct sensitivity to quartic gauge self-interactions
 and to off-shell Higgs-boson exchange. The latter property renders
-thoses processes an alternative window to EW symmetry
+those processes an alternative window to EW symmetry
 breaking, complementary to processes with direct (on-shell)
 Higgs-boson production.
 In this contribution we focus on triple W-boson production, which
@@ -53,8 +53,8 @@ and CMS~\cite{CMS:2019mpq} with 4.1$\sigma$ evidence by ATLAS in Run~2.
 
 Taking into account the decays of the EW massive vector bosons,
 the VBS and TVP processes are of the types 
-$\Pp\Pp\to 4\mathrm{leptons}+2\mathrm{jets}+X$
-and $\Pp\Pp\to 6\mathrm{leptons}+X$, respectively, and thus involve
+$\Pp\Pp\to 4\text{leptons}+2\text{jets}+X$
+and $\Pp\Pp\to 6\text{leptons}+X$, respectively, and thus involve
 already six particles at leading order (LO).
 The calculation of radiative corrections to processes of such complexity is 
 rather demanding. 
@@ -98,11 +98,11 @@ employs a combination of \Sherpa
 \cite{Bothmann:2019yzt,Gleisberg:2008ta,Bothmann:2016nao,Hoeche:2014rya} 
 and \Recola \cite{Actis:2012qn,Actis:2016mpe}, where
 \Sherpa provides the tree-level matrix elements, 
-infrared substraction, process management, and phase-space 
+infrared subtraction, process management, and phase-space 
 integration through its matrix element generator \Amegic 
 \cite{Krauss:2001iv,Gleisberg:2007md,Schonherr:2017qcj}. 
 \Recola is interfaced \cite{Biedermann:2017yoi} to provide 
-all renormalised virtual corrections, where the loop integrals are evaluated with the
+all renormalized virtual corrections, where the loop integrals are evaluated with the
 \Collier library~\cite{Denner:2016kdg},
 which in turn is based on the results of 
 Refs.~\cite{Denner:2002ii,Denner:2005nn,Denner:2010tr}.
@@ -115,7 +115,7 @@ processes~\cite{Ballestrero:2018anz,Denner:2019tmn,Denner:2019zfp}.
 The first code uses dipole subtraction as presented in Ref.~\cite{Catani:1996vz} for QCD corrections and 
 in Refs.~\cite{Dittmaier:1999mb,Dittmaier:2008md} for EW corrections.
 Matrix elements were generated using \Madgraph \cite{Alwall:2014hca} and \Recola,
-and the loop integrals were evaulated with \Collier.
+and the loop integrals were evaluated with \Collier.
 The second code is able to use either dipole subtraction as presented in Ref.~\cite{Catani:1996vz} 
 for both QCD and EW corrections, the latter using the trivial substitutions for the Casimir operator 
 (see, e.g., in Sect~3.2 of Ref.~\cite{Kallweit:2014xda}) or, alternatively, 
@@ -172,7 +172,7 @@ WWW production process $\Pp\Pp\rightarrow\Pe^-\bar\nu_{\Pe}\mu^+\nu_\mu\tau^+\nu
 at LO (top row) and at NLO EW (bottom row).}
 \label{fig:www-diagrams}
 \end{figure}
-At LO, we can distinguish three basic classes of diagrams acccording to their different resonance structure:
+At LO, we can distinguish three basic classes of diagrams according to their different resonance structure:
 \begin{enumerate}
 \item diagrams with three simultaneously resonant \PW bosons (left diagram in the top row of 
 Fig.~\ref{fig:www-diagrams}), 
@@ -256,7 +256,7 @@ and widths to
 \end{center}
 All remaining quarks and leptons, in particular the bottom quark and the $\tau$-lepton,
 are considered massless.
-The CKM matrix is parametrised using the Cabibbo angle 
+The CKM matrix is parametrized using the Cabibbo angle 
 \begin{equation}
   \theta_\text{C}=0.22731\;,\nonumber
 \end{equation}
@@ -271,10 +271,10 @@ real parts of the complex masses, i.e.\
 \begin{equation}
   \alpha=\frac{\sqrt{2}}{\pi}\,G_\mu\,M_{\PW}^2\left(1-\frac{M_{\PW}^2}{M_{\PZ}^2}\right)\;.
 \end{equation}
-The EW parameters are accordingly renormalised using the 
+The EW parameters are accordingly renormalized using the 
 complex version of the EW on-shell renormalization scheme~\cite{Denner:2005fg,Denner:2019vbn}.
 
-The parton densities of the proton are parametrised using the 
+The parton densities of the proton are parametrized using the 
 NNPDF 3.1 QCD LO PDF set \cite{Ball:2017nwa} for the LO cross 
 section $\sigma^\text{LO}$, NNPDF 3.1 QCD+QED NLO PDF set 
 \cite{Bertone:2017bme} for the Born contribution $\sigma_1^\text{LO}$ to the 
@@ -288,7 +288,7 @@ and \textsc{LHAPDF}\footnote{
   \texttt{NNPDF31\_lo\_as\_0118} and 
   \texttt{NNPDF31\_nlo\_as\_0118\_luxqed}.
 } to evaluate them, and
-set the renormalisation and factorisation scale according to 
+set the renormalization and factorization scale according to 
 \begin{equation}
   \mu_\text{R/F}^2=\left(\vp3\,M_{\PW}\right)^2+\left(\sum\limits_{i\in S}\vec{p}_{\mathrm{T},i}\right)^2
 \end{equation}
@@ -399,7 +399,7 @@ of multiple narrow resonances.
     Comparison of computed cross sections and relative 
     corrections of DKS and \Sherpa{}+\Recola. 
     For reference the black line 
-    shows a properly normalised normal distribution.
+    shows a properly normalized normal distribution.
     \label{fig:WWW:xscomp}
   }
 \end{figure}
@@ -447,7 +447,7 @@ The TPA performs very well in integrated cross sections and in angular and rapid
 which are insensitive to off-shell effects.
 For some observables, however, that become sensitive to non-resonant contributions, 
 like the missing transverse momentum at high scales, the TPA is not a sufficient approximation.
-Sizable deviations can be observed in these regions.
+Sizeable deviations can be observed in these regions.
 Nevertheless, the size of the TPA uncertainty can be estimated reasonably well to identify 
 those regions by analyzing TPA results only.
 \end{itemize}
